@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>sig_sync</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>AXI_clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>AXI_clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXI_CLK.ASSOCIATED_BUSIF">sig_out</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF">sig</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET">resyncn</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>sig</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sig</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>sig_out</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sig_out</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>resyncn</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>resyncn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>sig_sync</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f2824503</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>sig_sync</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f2824503</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_testbench</spirit:name>
+        <spirit:displayName>Test Bench</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation.testbench</spirit:envIdentifier>
+        <spirit:modelName>pd_sim</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_testbench_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>0b37274f</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>59183a97</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CLK_NUM&apos;)) - 1)">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sig</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>resyncn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AXI_clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sig_out</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>CLK_NUM</spirit:name>
+        <spirit:displayName>Clk Num</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CLK_NUM">8</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/phase_detector.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f2824503</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/phase_detector.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_testbench_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/pd_sim.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_testbench</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/sig_sync_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_59183a97</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>sig_sync_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>CLK_NUM</spirit:name>
+      <spirit:displayName>Clk Num</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CLK_NUM">8</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">sig_sync_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">spartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aspartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>sig_sync_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>8</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-01-15T05:27:27Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e9b7e2d_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24869fd9_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10eac773_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@409b7d3e_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d462fb1_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12f1886e_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27c3c57b_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56721d69_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@198a5c9f_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50f1cd70_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a3b0c6d_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d2f6fbd_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@102c7111_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5568203b_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@498b3a13_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a834378_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a624484_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f15cef8_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@df21d6d_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6439b82a_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53200b75_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a5ce8af_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1522847_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e380b1e_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55430995_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40970475_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@158f4589_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@649fcbf0_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67cd859a_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@368638c2_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a36111a_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1aa79065_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50163f65_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77ed9c01_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25d1f58f_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1de6d31d_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e0408bd_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6db36b57_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3132ae99_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d66ea3c_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@796b5e8a_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55ad5720_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36c15926_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7392b830_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a1b02c1_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68df0251_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e0d7af9_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51dc7204_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5672258e_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1efe47_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8b7c9e2_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@176ea04a_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27871784_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15f6d0af_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24150b83_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b980480_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f24ef0f_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b5d6536_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@252fb037_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2542b038_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36fc28eb_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39b8e912_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ea10fc1_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1699f8a7_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38f3778e_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4db42317_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7511c159_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1280e6c8_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f17c847_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a1d7177_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60414615_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52227b59_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b58bdf3_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35eab4b3_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2edf409c_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3696ecb4_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a0f299b_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bec382d_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d8373bf_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c7a2941_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73897524_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ccca82a_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b044097_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f4cd9b_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6de6a0dd_ARCHIVE_LOCATION">d:/vivado/ip_repo/sig_sync</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="bd2c959e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3c066f54"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="dbe31a27"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="d1662193"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="34cc53f5"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>laser_receiver_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>M_AXIS</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_tdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_tlast</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TKEEP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_tkeep</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.M_AXIS.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.TDATA_NUM_BYTES">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDEST_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.TDEST_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TID_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.TID_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.TUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TREADY</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.HAS_TREADY">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TSTRB</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.HAS_TSTRB">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TKEEP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.HAS_TKEEP">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TLAST</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.HAS_TLAST">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.CLK_DOMAIN"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.LAYERED_METADATA">undef</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.M_AXIS.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>M_AXIS_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.M_AXIS_RST.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>M_AXIS_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_CLK.ASSOCIATED_BUSIF">M_AXIS</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_CLK.ASSOCIATED_RESET">m_axis_aresetn</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_CLK.CLK_DOMAIN"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.M_AXIS_CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>sig</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sig</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SIG.LAYERED_METADATA">undef</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>state</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>state</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.STATE.LAYERED_METADATA">undef</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_veriloginstantiationtemplate</spirit:name>
+        <spirit:displayName>Verilog Instantiation Template</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.template</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_veriloginstantiationtemplate_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Tue Jan 14 23:42:45 UTC 2020</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:43c3706a</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesis</spirit:name>
+        <spirit:displayName>Verilog Synthesis</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>laser_receiver_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Tue Jan 14 23:54:07 UTC 2020</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:43c3706a</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_synthesisconstraints</spirit:name>
+        <spirit:displayName>Synthesis Constraints</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis.constraints</spirit:envIdentifier>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:43c3706a</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
+        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>laser_receiver_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Tue Jan 14 23:54:07 UTC 2020</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:43c3706a</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogbehavioralsimulation</spirit:name>
+        <spirit:displayName>Verilog Simulation</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>laser_receiver_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Tue Jan 14 23:54:07 UTC 2020</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:1ba77a57</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsimulationwrapper</spirit:name>
+        <spirit:displayName>Verilog Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>laser_receiver_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsimulationwrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Tue Jan 14 23:54:07 UTC 2020</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:1ba77a57</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>sig</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>state</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_tkeep</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_tlast</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>FIFO_LENGTH</spirit:name>
+        <spirit:displayName>Fifo Length</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FIFO_LENGTH">8</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_veriloginstantiationtemplate_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>laser_receiver_0.vho</spirit:name>
+        <spirit:userFileType>vhdlTemplate</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>laser_receiver_0.veo</spirit:name>
+        <spirit:userFileType>verilogTemplate</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>hdl/FIFO.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/decoder_8b_10b.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/laser_receiver_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/laser_receiver_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>hdl/FIFO.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/decoder_8b_10b.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/laser_receiver_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/laser_receiver_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>AXI-4 Stream</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">laser_receiver_0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>FIFO_LENGTH</spirit:name>
+      <spirit:displayName>Fifo Length</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.FIFO_LENGTH">8</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>laser_receiver_v1.0</xilinx:displayName>
+      <xilinx:coreRevision>29</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ef7501d_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@776acc6b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@db40aed_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45211cff_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5409cc49_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49247e23_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16dac583_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@528003c3_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11e1746f_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@310a0e26_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69df5257_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@188075ab_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26f253af_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d13e288_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d667fba_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bb283ad_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@319608ff_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33e514ce_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12a1e72_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71d13ff4_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f3f4b9a_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75dc81bc_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53196239_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@443320ce_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66c7e8a6_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a6a61fe_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@359a1fb7_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58d2aaea_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47e6f98c_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28ca71d8_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43633d53_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ab6adc6_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75fb7e02_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@504fbabd_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@773baa81_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fd7267b_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11547d5f_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e44e91a_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fc9b9d3_ARCHIVE_LOCATION">/home/wmj/file/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a4e8a43_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b1b173d_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e8d9e79_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cff8e4_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3325faa4_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4286059_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a2e0870_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20977d0c_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13294cee_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45f4fcc9_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12420a35_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f49393e_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17b862e0_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6253dc74_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@349f20ee_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@319e62c3_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@743e64d8_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@601f1210_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@595b33da_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33881df5_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78bbe2fb_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@320e902f_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60bc9df0_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32e8a673_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d56b274_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@de9ddc9_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a9f533e_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30db56a4_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e019dd0_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73fc25ad_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27421532_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25cc4d95_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2264fe7e_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fcde099_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@125b8f22_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@488116c5_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74044b55_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c18c71e_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@86b1cf6_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@470f7936_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@226f7b1_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3729302b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae58844_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f699c0a_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a994061_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@514078e3_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@515cfe96_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@da1e74a_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cf3cf4f_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78c6dde2_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14a8d9e6_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@309e198d_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d77ee19_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bc5b420_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e951740_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50e4b8d1_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76db622e_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8e0f221_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@367002c3_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@682f8aca_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@167df904_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@675c5776_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@df2d5ee_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2be24557_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34ec43c2_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13ef154f_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a847022_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fb13f81_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21658e77_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75484d48_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d87b935_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f93acff_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20dc7241_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76c8629e_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27047782_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@296361f1_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@334f884a_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40dbbd3b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ad7905a_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@224748ee_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3088bd15_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fbe99f5_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d06e92f_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8b2eda9_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33bf8504_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ce29c73_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37546368_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66908e81_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d9b768e_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d73f7fb_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a09a685_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67bab11e_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39ab1ed2_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d617ea0_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38a2401f_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ee6ddf3_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@570b84eb_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7411c8de_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4119c9ce_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dc7ce05_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65254bc8_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c247ba4_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fd68a3a_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77da7c7c_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24749933_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@721a6cf6_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12834f35_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f4c91f5_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ed5a4f1_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19f3b543_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fbf5802_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c18414d_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a87db44_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26097e6d_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b640a01_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33f9254c_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f075e9b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24f5c8a5_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aee07d8_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60ddae87_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78b33fa6_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cb75083_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73f77f8f_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39448c3d_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4991dcda_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@535274d8_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78e40180_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f284222_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44fa2113_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6edb215_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ff7c383_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ea62fa3_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6743797c_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4258ea66_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@609421e7_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ce3e102_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cd3b20b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1468a238_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f860910_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38ab66a4_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@459b7bcf_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fcabb4d_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b02f824_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c11f583_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dde2b16_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6641b12b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61e69b74_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a59a38_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bca8559_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11910eee_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@229ccde6_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2acb7f4b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2df7167e_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78f2c1b5_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e93737e_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ca1bd9a_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@646c9982_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@586f10b2_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a08c08b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d903e07_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dfc768b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5932ed5a_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ba65a52_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7037f5a6_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1333306c_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d0915e1_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78a46a7e_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67c17c3a_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@507204cd_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9900dff_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fe88a5b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11899a65_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77873cdc_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@266636be_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bcf14c7_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77f6b917_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b020660_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@620ca2ea_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bdb6da0_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f6e073b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d21f80a_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32c26819_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ae6ff8_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f486615_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42bb0033_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73bdaff8_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f813823_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ad8e880_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e4711fb_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cbf4b2f_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25bd925c_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32003174_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@168b6570_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58ff39e6_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b045beb_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b52b96f_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68d13f5_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b25714d_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cfe0945_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ec1fb83_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57280f61_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@353a0b3e_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b44d8f0_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dc095f0_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d4f3a24_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f67a6f7_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6db4744c_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14407340_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28a6dc00_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6197a1e1_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5db6c8b1_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@790c78c9_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@703c1bc8_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55b1ef27_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18f04a4a_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f9df3a5_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75d9523b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18b39164_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c050254_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54032f26_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48aac699_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e11cfc7_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e537694_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d508e33_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a96b576_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ed77025_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@183dfc0d_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ac2fb5b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15f50903_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@564eb15_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28d202f_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c5c613_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ff1f093_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ddade64_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c646c90_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d7bb259_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c21ae72_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1be19f89_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48c4b549_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4601e26d_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fa8c340_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cdf7cc3_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26f2d893_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@536a5106_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@410793d7_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@313514cc_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6319d2e4_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@645a231e_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@279d6abf_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70764f1b_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73f47f38_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@404f9ca3_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67f2e61f_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10ef0235_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4194ade5_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@419bff27_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fb3734d_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ce4bfe7_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74aaae77_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bdb1f2_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ee57cf3_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70fcab85_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49171b9c_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3beb8a61_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@548f1ea6_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3160a54a_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bfd60da_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63921a46_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66f640da_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33857f0f_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@508dd5a0_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65a41d5a_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6818db16_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@530a4323_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@580edfd7_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48a911b0_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19be97c8_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75480929_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67d89e05_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@423c604c_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9199086_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@554141a4_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@643bf41_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4861e568_ARCHIVE_LOCATION">d:/vivado/ip_repo/laser_receiver_1.0</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.HAS_TKEEP" xilinx:valueSource="constant"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.HAS_TLAST" xilinx:valueSource="constant"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.HAS_TREADY" xilinx:valueSource="constant"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.HAS_TSTRB" xilinx:valueSource="constant"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TDATA_NUM_BYTES" xilinx:valueSource="constant"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TDEST_WIDTH" xilinx:valueSource="constant"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TID_WIDTH" xilinx:valueSource="constant"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TUSER_WIDTH" xilinx:valueSource="constant"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="0b01c6fa"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bffd3ca2"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="3c077c64"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="7790199e"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="eb68e999"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

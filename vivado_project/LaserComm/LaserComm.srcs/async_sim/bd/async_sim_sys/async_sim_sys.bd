@@ -1,0 +1,162 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xF5813073A3C91F99",
+      "device": "xc7z010clg400-1",
+      "name": "async_sim_sys",
+      "synth_flow_mode": "None",
+      "tool_version": "2019.1"
+    },
+    "design_tree": {
+      "laser_sender_0": "",
+      "laser_receiver_0": "",
+      "sig_sync_0": ""
+    },
+    "interface_ports": {
+      "receiver_axi": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+      },
+      "sender_axi": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "HAS_TKEEP": {
+            "value": "1"
+          },
+          "HAS_TLAST": {
+            "value": "1"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "1"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          }
+        }
+      }
+    },
+    "ports": {
+      "clk_8": {
+        "type": "clk",
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "sender_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "sender_rst:sender_rst"
+          }
+        }
+      },
+      "receiver_clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "sender_rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "receiver_rst": {
+        "type": "rst",
+        "direction": "I"
+      }
+    },
+    "components": {
+      "laser_sender_0": {
+        "vlnv": "xilinx.com:user:laser_sender:1.0",
+        "xci_name": "async_sim_sys_laser_sender_0_0"
+      },
+      "laser_receiver_0": {
+        "vlnv": "xilinx.com:user:laser_receiver:1.0",
+        "xci_name": "async_sim_sys_laser_receiver_0_0"
+      },
+      "sig_sync_0": {
+        "vlnv": "xilinx.com:user:sig_sync:1.0",
+        "xci_name": "async_sim_sys_sig_sync_0_0"
+      }
+    },
+    "interface_nets": {
+      "S_AXIS_0_1": {
+        "interface_ports": [
+          "sender_axi",
+          "laser_sender_0/S_AXIS"
+        ]
+      },
+      "laser_receiver_0_M_AXIS": {
+        "interface_ports": [
+          "receiver_axi",
+          "laser_receiver_0/M_AXIS"
+        ]
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk_8",
+          "sig_sync_0/clk"
+        ]
+      },
+      "laser_sender_0_sig": {
+        "ports": [
+          "laser_sender_0/sig",
+          "sig_sync_0/sig"
+        ]
+      },
+      "sig_sync_0_sig_out": {
+        "ports": [
+          "sig_sync_0/sig_out",
+          "laser_receiver_0/sig"
+        ]
+      },
+      "s_axis_aclk_0_1": {
+        "ports": [
+          "sender_clk",
+          "laser_sender_0/s_axis_aclk"
+        ]
+      },
+      "AXI_clk_0_1": {
+        "ports": [
+          "receiver_clk",
+          "laser_receiver_0/m_axis_aclk",
+          "sig_sync_0/AXI_clk"
+        ]
+      },
+      "s_axis_aresetn_0_1": {
+        "ports": [
+          "sender_rst",
+          "laser_sender_0/s_axis_aresetn"
+        ]
+      },
+      "m_axis_aresetn_0_1": {
+        "ports": [
+          "receiver_rst",
+          "laser_receiver_0/m_axis_aresetn"
+        ]
+      }
+    }
+  }
+}
